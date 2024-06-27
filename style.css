@@ -1,31 +1,39 @@
+:root {
+    --main-bg-color: #121212;
+    --nav-bg-color: #1F1F1F;
+    --accent-color: #1b9bff;
+    --text-color: #E0E0E0;
+    --border-color: #2A2A2A;
+    --input-bg-color: #2A2A2A;
+    --input-border-color: #3A3A3A;
+}
+
+/* Reset styles */
 * {
-    padding: 0;
     margin: 0;
-    text-decoration: none;
-    list-style: none;
+    padding: 0;
     box-sizing: border-box;
 }
 
-
+/* Typography */
 body {
     font-family: 'Poppins', sans-serif;
-    color: #E0E0E0;
-    background: #121212;
-    width: 100%;
+    color: var(--text-color);
+    background: var(--main-bg-color);
     min-height: 100vh;
     overflow-x: hidden;
 }
 
-
+/* Navigation */
 nav {
-    background: #1F1F1F;
+    background: var(--nav-bg-color);
     height: 80px;
     width: 100%;
 }
 
 label.logo {
     color: white;
-    font-size: 35px;
+    font-size: 2.1875rem;
     line-height: 80px;
     padding: 0 20px;
     font-weight: bold;
@@ -44,7 +52,7 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    font-size: 17px;
+    font-size: 1.0625rem;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
@@ -53,12 +61,12 @@ nav ul li a {
 
 a.active,
 a:hover {
-    background: #1b9bff;
+    background: var(--accent-color);
     transition: .5s;
 }
 
 .checkbtn {
-    font-size: 30px;
+    font-size: 1.875rem;
     color: white;
     float: right;
     line-height: 80px;
@@ -71,10 +79,13 @@ a:hover {
     display: none;
 }
 
-
+/* Components */
 .option-1,
+.option-2,
+.option-3,
+.option-4,
 .option {
-    border: 3px solid #2A2A2A;
+    border: 3px solid var(--border-color);
     width: 90%;
     max-width: 75vw;
     height: max(400px, 75vh);
@@ -88,109 +99,16 @@ a:hover {
 }
 
 #div-1 {
-    font-size: 120px;
+    font-size: 7.5rem;
 }
 
 #div-2 {
-    font-size: 60px;
+    font-size: 3.75rem;
     opacity: 0.75;
 }
 
-
-@media (max-width: 952px) {
-    label.logo {
-        font-size: 30px;
-        padding-left: 20px;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
-}
-
-
-
-@media (max-width: 858px) {
-    .checkbtn {
-        display: block;
-    }
-
-    nav ul {
-        position: fixed;
-        width: 100%;
-        height: calc(100vh - 80px);
-        background: #1F1F1F;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-        z-index: 1000;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 20px 0;
-        line-height: 30px;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-    }
-
-    a:hover,
-    a.active {
-        background: none;
-        color: #0082e6;
-    }
-
-    #check:checked~ul {
-        left: 0;
-    }
-}
-
-/*media for .option-1 in tablet form*/
-
-@media (max-width: 950px) {
-    #div-1 {
-        font-size: 75px;
-    }
-
-    #div-2 {
-        font-size: 50px;
-        opacity: 0.75;
-    }
-}
-
-@media (max-width: 600px) {
-    label.logo {
-        font-size: 20px;
-        padding-left: 10px;
-    }
-
-    .checkbtn {
-        margin-right: 20px;
-    }
-
-    #div-1 {
-        font-size: 50px;
-    }
-
-    #div-2 {
-        font-size: 25px;
-        opacity: 0.75;
-    }
-
-    .option-1,
-    .option {
-        width: 90%;
-        max-width: none;
-    }
-}
-
-
-
+/* Option 4 */
 .option-4.option {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
@@ -208,13 +126,13 @@ a:hover {
 
 .right-div {
     width: 35%;
-    border-left: 1px solid #2A2A2A;
+    border-left: 1px solid var(--border-color);
     padding-left: 20px;
     overflow-y: auto;
 }
 
 .timer-box {
-    font-size: 80px;
+    font-size: 5rem;
     margin-bottom: 20px;
 }
 
@@ -223,45 +141,8 @@ a:hover {
     gap: 10px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #1b9bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0082e6;
-}
-
-@media (max-width: 768px) {
-    .option-4.option {
-        flex-direction: column;
-    }
-
-    .left-div,
-    .right-div {
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .right-div {
-        border-left: none;
-        border-top: 1px solid #2A2A2A;
-        margin-top: 20px;
-    }
-
-    .timer-box {
-        font-size: 36px;
-    }
-}
-
+/* Option 2 */
 .option-2.option {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
@@ -279,7 +160,7 @@ button:hover {
 
 .right-side {
     width: 35%;
-    border-left: 1px solid #2A2A2A;
+    border-left: 1px solid var(--border-color);
     padding-left: 20px;
     overflow-y: auto;
 }
@@ -295,10 +176,10 @@ button:hover {
     width: 60px;
     height: 40px;
     text-align: center;
-    font-size: 18px;
-    background-color: #2A2A2A;
-    color: #E0E0E0;
-    border: 1px solid #3A3A3A;
+    font-size: 1.125rem;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--input-border-color);
     border-radius: 5px;
 }
 
@@ -307,59 +188,8 @@ button:hover {
     gap: 10px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #1b9bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0082e6;
-}
-
-@media (max-width: 768px) {
-    .option-2.option {
-        flex-direction: column;
-    }
-
-    .left-side,
-    .right-side {
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .right-side {
-        border-left: none;
-        border-top: 1px solid #2A2A2A;
-        margin-top: 20px;
-    }
-
-    .input-time input {
-        width: 50px;
-        height: 35px;
-        font-size: 16px;
-    }
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-/* code for .option-3 --> timer option  */
-
+/* Option 3 */
 .option-3.option {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
@@ -377,20 +207,17 @@ input[type=number] {
 
 .right-part {
     width: 50%;
-    border-left: 1px solid #2A2A2A;
+    border-left: 1px solid var(--border-color);
     padding-left: 20px;
     overflow-y: auto;
-
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 2rem;
 }
 
 .input-timer {
-    font-size: 80px;
+    font-size: 5rem;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -401,10 +228,10 @@ input[type=number] {
     width: 60px;
     height: 40px;
     text-align: center;
-    font-size: 18px;
-    background-color: #2A2A2A;
-    color: #E0E0E0;
-    border: 1px solid #3A3A3A;
+    font-size: 1.125rem;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--input-border-color);
     border-radius: 5px;
 }
 
@@ -413,10 +240,11 @@ input[type=number] {
     gap: 10px;
 }
 
+/* Common button styles */
 button {
     padding: 10px 20px;
-    font-size: 16px;
-    background-color: #1b9bff;
+    font-size: 1rem;
+    background-color: var(--accent-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -428,48 +256,142 @@ button:hover {
     background-color: #0082e6;
 }
 
-
-@media (max-width: 768px) {
-    .option-3.option {
-        flex-direction: column;
-    }
-
-    .left-part,
-    .right-part {
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .right-part {
-        border-left: none;
-        border-top: 1px solid #2A2A2A;
-        margin-top: 20px;
-    }
-
-    .input-timer {
-        font-size: 36px;
-    }
-
-    .input-timer input {
-        width: 50px;
-        height: 35px;
-        font-size: 16px;
-    }
-}
-
+/* Hide default number input arrows */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-input[type=number] {
+/* input[type=number] {
     -moz-appearance: textfield;
-}
-
-.option-4,
+  }
+   */
+/* Initially hide options 2, 3, and 4 */
 .option-2,
-.option-3 {
+.option-3,
+.option-4 {
     display: none;
 }
 
+/* Media Queries */
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 1.875rem;
+        padding-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--nav-bg-color);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1000;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 1.25rem;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    #div-1 {
+        font-size: 4.6875rem;
+    }
+
+    #div-2 {
+        font-size: 3.125rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .option-4.option,
+    .option-2.option,
+    .option-3.option {
+        flex-direction: column;
+    }
+
+    .left-div,
+    .right-div,
+    .left-side,
+    .right-side,
+    .left-part,
+    .right-part {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .right-div,
+    .right-side,
+    .right-part {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        margin-top: 20px;
+    }
+
+    .timer-box,
+    .input-timer {
+        font-size: 2.25rem;
+    }
+
+    .input-time input,
+    .input-timer input {
+        width: 50px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    label.logo {
+        font-size: 1.25rem;
+        padding-left: 10px;
+    }
+
+    .checkbtn {
+        margin-right: 20px;
+    }
+
+    #div-1 {
+        font-size: 3.125rem;
+    }
+
+    #div-2 {
+        font-size: 1.5625rem;
+    }
+
+    .option-1,
+    .option {
+        width: 90%;
+        max-width: none;
+    }
+}
