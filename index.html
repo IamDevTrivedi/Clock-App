@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alarm App | Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            &#9776;
+        </label>
+        <label class="logo">CLOCK APP</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Alarm</a></li>
+            <li><a href="#">Timer</a></li>
+            <li><a href="#">Stopwatch</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="option-1 option">
+        <div id="div-1">
+        </div>
+        <div id="div-2">
+        </div>
+    </div>
+
+    <!-- option-2 here  -->
+    <div class="option-2 option">
+
+        <div class="left-side">
+            <div class="input-time">
+                <input type="number" name="HH" id="hh" placeholder="HH" min="0" max="23" required>
+                <input type="number" name="MM" id="mm" placeholder="MM" min="0" max="59" required>
+                <input type="number" name="SS" id="ss" placeholder="SS" min="0" max="59" required>
+
+            </div>
+
+            <div class="add-btn">
+                <button class="alarm-start-btn">+ Add Alarm</button>
+            </div>
+
+        </div>
+
+        <div class="right-side">
+
+        </div>
+
+
+
+    </div>
+
+    <!-- option -3 code here  -->
+    <div class="option-3 option">
+
+        <div class="left-part">
+
+            <div class="input-timer">
+                <input type="number" name="HH" id="hh-2" placeholder="HH" min="0" max="23" required>
+                <input type="number" name="MM" id="mm-2" placeholder="MM" min="0" max="59" required>
+                <input type="number" name="SS" id="ss-2" placeholder="SS" min="0" max="59" required>
+            </div>
+
+            <div class="btn-1">
+                <button class="timer-start-btn"> Start Timer</button>
+            </div>
+        </div>
+
+        <div class="right-part">Set A Timer !</div>
+
+    </div>
+
+    <div class="option-4 option">
+        <div class="left-div">
+            <div class="timer-box"> 00:00:00</div>
+            <div class="button-box">
+                <button>Start</button>
+                <button>Flag</button>
+            </div>
+        </div>
+        <div class="right-div"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
